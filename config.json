@@ -1,0 +1,20 @@
+{
+    "params":{
+        "local_server":"True",
+        "local_uri":"mysql://root:@localhost/codingthunder",
+        "prod_uri":"mysql://root:@127.0.0.1",
+        "blog_title":"Love for mother nature ",
+        "blog_name":"Love for mother nature! ",
+        "tagline":"A Blog like by nature lovers. ",
+        "about_text":"I am the master of HTML, FLASK and JavaScript. I know everything needed to make a website function efficiently. I didn't stop with the web. I went beyond with the most popular Python framework called django. I even know the deployment, server and security. I will give you 100% web solution.copyright MD imtiazul islam shuvo 2021, a Blind programmer. ",
+        "gmail-user":"mdimtiazulislam50@gmail.com",
+        "gmail-password":"your password",
+        "fb_url":"https://www.facebook.com/mdimtiaz.shovo",
+        "tw_url":"https://www.twitter.com/codingthunder",
+        "gh_url":"https://github.com/md-imtiaz",
+        "no_of_posts":1, 
+        "admin_name":"shuvo",
+        "admin_password":"3000",
+        "upload_location":"D:\\pythonUniverse\\pythonFlask\\MyTechBlog\\static"
+    }
+}

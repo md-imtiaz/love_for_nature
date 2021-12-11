@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block body %}
+<!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/dandelion.jpg')}}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Admin Panel</h1>
+                            <span class="subheading">Manage your posts </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <a href="/dashboard"> <button class="btn btn-primary">Dashboard home </button></a>
+                    <a href="/logout"> <button class="btn btn-primary">Logout</button></a>
+                    <hr class="my-4" />
+                    <h1>Add/Edit Posts </h1>
+                    <form name="editpost" id="contactForm" method="post" action="/edit/{{id}}" data-sb-form-api-token="API_TOKEN">
+                        <div class="form-floating">
+                            <input class="form-control" id="title" name="title" type="text" placeholder="Enter your title..." value="{{posts.title}}"
+                                data-sb-validations="required" />
+                            <label for="title">Edit title</label>
+                            <div class="invalid-feedback" data-sb-feedback="title:required">A title is required.</div>
+                        </div>
+                        <div class="form-floating">
+                            <input class="form-control" id="tline" name="tline" type="text" placeholder="Enter your tagline..." value="{{posts.tline}}"
+                                data-sb-validations="required,email" />
+                            <label for="tline">Edit tagline</label>
+                            <div class="invalid-feedback" data-sb-feedback="tagline:required">A tagline is required.</div>
+                            <!-- <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div> -->
+                        </div>
+                        <div class="form-floating">
+                            <input class="form-control" id="slug" name="slug" type="text" placeholder="Enter your slug..." value="{{posts.slug}}"
+                                data-sb-validations="required" />
+                            <label for="slug">Edit slug</label>
+                            <div class="invalid-feedback" data-sb-feedback="slug:required">A slug is required.
+                            </div>
+                        <div class="form-floating">
+                            <input class="form-control" id="content" name="content" type="text" placeholder="Enter your content..." value="{{posts.content}}"
+                                data-sb-validations="required" />
+                            <label for="content">Edit content</label>
+                            <div class="invalid-feedback" data-sb-feedback="content:required">content is required.
+                            </div>
+                        <div class="form-floating">
+                            <input class="form-control" id="img_file" name="img_file" type="text" placeholder="Add your image..." value="{{posts.img_file}}"
+                                data-sb-validations="required" />
+                            <label for="img_file">add image</label>
+                            <div class="invalid-feedback" data-sb-feedback="image:required">an image is required.
+                            </div>
+                        <br />
+                        <button class="btn btn-primary text-uppercase disabled" id="submitButton"
+                            type="submit">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endblock body %}
