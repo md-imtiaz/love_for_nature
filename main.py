@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
 from datetime import datetime
@@ -174,6 +174,7 @@ def contact():
                           recipients=[params["gmail-user"]],
                           body=message + "\n PH_num: " + phone
                           )
+        flash("thanks for submiting the form! ", "success")
 
     return render_template("contact.html", params=params)
 
